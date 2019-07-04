@@ -7,6 +7,7 @@ var localStrategy = require("passport-local").Strategy;
 var bcrypt = require("bcryptjs");
 var userRouter = require("./api/users");
 var indexRouter = require("./api/index");
+var cookieParser = require('cookie-parser');
 // var Datastore = require("nedb"),
 //   db = new Datastore({ filename: "user_db", autoload: true });
 var app = express();
@@ -22,6 +23,14 @@ app.use(
     resave: true
   })
 );
+
+app.use(cookieParser());
+
+//Passport
+
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(passport.initialize());
 app.use(passport.session());
