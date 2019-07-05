@@ -2,9 +2,11 @@
     
     
 ## Installation
-use the git command ;   git clone https://github.com/haewhybabs/NodeLoanProject.git  , then
-npm install , to install all the dependencies used in package.json
-start the server with "nodemon"
+follow the following command to get it started:
+
+* git clone https://github.com/haewhybabs/NodeLoanProject.git
+* npm install , to install all the dependencies used in package.json
+* start the server with "nodemon"
 
 ## Documentation
 There are 4 endppoints for the API
