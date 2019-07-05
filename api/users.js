@@ -99,9 +99,6 @@ passport.use(new LocalStrategy(
         return done(null, false, { message: 'Incorrect username.' });
       }
       bcrypt.compare(password, user.password, function(err, isMatch) {
-        console.log(user);
-        console.log(password);
-
         if (err) { return done(err); }
         if(isMatch){
           return done(null, user);
