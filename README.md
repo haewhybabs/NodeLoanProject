@@ -17,6 +17,9 @@ There are 4 endppoints for the API
 * **Apply for loans :** post request to ; "servername"/loan/apply . Here, user needs to login and pass the loanId as the input post.....
 **Note ,** it returns false, if user has an active status for the loan
 
+#### PostMan Collection link
+https://www.getpostman.com/collections/7971a847efddd96251e6
+
 ## Author
 **Ayobami Babalola**
 
