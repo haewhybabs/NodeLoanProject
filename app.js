@@ -5,9 +5,10 @@ var session = require("express-session");
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
 var bcrypt = require("bcryptjs");
+var cookieParser = require('cookie-parser');
 var userRouter = require("./api/users");
 var indexRouter = require("./api/index");
-var cookieParser = require('cookie-parser');
+var loanRouter = require("./api/loan");
 // var Datastore = require("nedb"),
 //   db = new Datastore({ filename: "user_db", autoload: true });
 var app = express();
@@ -77,6 +78,7 @@ app.use(
 
 app.use("/users", userRouter);
 app.use("/", indexRouter);
+app.use("/loan", loanRouter);
 
 port = 8000;
 app.listen(port, function() {

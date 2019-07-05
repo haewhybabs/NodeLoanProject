@@ -10,13 +10,6 @@ db = new Datastore({ filename: "./user_db", autoload: true });
 
 var bcrypt= require('bcryptjs');
 
-function emailExist(email) {
-  db.findOne({ email: email }),(function (err, user){
-    console.log(user);
-  });
-
-}
-
 
 router.post("/registration", function(req, res, next) {
   //Get Form Values
@@ -117,11 +110,6 @@ passport.use(new LocalStrategy(
           return done(null, false, {message:'Invalid Password'});
         }
       });
-      // if (!user.validPassword(password)) {
-      //   return done(null, false, { message: 'Incorrect password.' });
-      // }
-
-      // return done(null, user);
     });
   }
 ));
