@@ -2,7 +2,7 @@
     
     
 ## Installation
-follow the following command to get it started:
+follow the following commands to get it started:
 
 * git clone https://github.com/haewhybabs/NodeLoanProject.git
 * npm install , to install all the dependencies used in package.json
